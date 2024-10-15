@@ -14,14 +14,14 @@ else
     exp_tag=${t_mode}_${t_coeff}
 fi
 
-DATA_ROOT_PATH=/media/ruanjiacheng/新加卷/ecodes/Prompt/data/vtab-1k
-RESUME_ROOT_PATH=/media/ruanjiacheng/新加卷/ecodes/Prompt/CV/GIST_ALL/outputs_adv/[linear_probe]_0 # TO */vit_base_patch16_224_in21k/vtab
+DATA_ROOT_PATH=/PATH/TO/vtab-1k
+RESUME_ROOT_PATH=/PATH/TO/outputs_adv/[linear_probe]_0 # TO */vit_base_patch16_224_in21k/vtab
 ADV_FILE_NAME="['linear_probe']_0_adv_fgsm"
-CSV_ROOT_PATH=/media/ruanjiacheng/新加卷/ecodes/Prompt/CV/GIST_ALL/outputs_adv/${exp_tag}_${ADV_FILE_NAME}/all_csv
+CSV_ROOT_PATH=/PATH/TO/outputs_adv/${exp_tag}_${ADV_FILE_NAME}/all_csv
 CSV_PATH=${CSV_ROOT_PATH}/all_csv.csv
-OUTPUT_PATH=/media/ruanjiacheng/新加卷/ecodes/Prompt/CV/GIST_ALL/outputs_adv/${exp_tag}_${ADV_FILE_NAME}/
+OUTPUT_PATH=/PATH/TO/outputs_adv/${exp_tag}_${ADV_FILE_NAME}/
 master_port=$(($RANDOM + 30000))
-train_py=/media/ruanjiacheng/新加卷/ecodes/Prompt/CV/GIST_ALL/test_adv.py
+train_py=/PATH/TO/test_adv.py
 
 
 NODE_NUM=1
