@@ -1,6 +1,5 @@
 t_mode=['prompt']
-# seq_adapter shared_par_adapter adaptformer linear_probe prompt lora gistb gistp gistip gist2
-# l1_reg l2_reg
+# seq_adapter adaptformer linear_probe prompt lora
 t_coeff=200
 GIST_FACTOR=0.75
 GISTB_T=0
@@ -14,12 +13,12 @@ else
     exp_tag=${t_mode}_${t_coeff}
 fi
 
-DATA_ROOT_PATH=/cluster/home/gaoxian/DTL/vtab-1k
-CSV_ROOT_PATH=/cluster/home/gaoxian/GIST_ALL/outputs/${exp_tag}/all_csv
+DATA_ROOT_PATH=PATH/TO/vtab-1k
+CSV_ROOT_PATH=PATH/TO/outputs/${exp_tag}/all_csv
 CSV_PATH=${CSV_ROOT_PATH}/all_csv.csv
-OUTPUT_PATH=/cluster/home/gaoxian/GIST_ALL/outputs/${exp_tag}/
+OUTPUT_PATH=PATH/TO/outputs/${exp_tag}/
 master_port=$(($RANDOM + 30000))
-train_py=/cluster/home/gaoxian/GIST_ALL/train.py
+train_py=PATH/TO/train.py
 
 
 NODE_NUM=2
